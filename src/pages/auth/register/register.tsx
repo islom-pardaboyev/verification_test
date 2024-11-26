@@ -11,6 +11,7 @@ import { UserType } from "../../../utils";
 function Register() {
   const [createUser] = useCreateUserMutation();
   const { data = [] } = useGetAllUserQuery(true) as { data: UserType[] };
+  console.log(data)
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [showConfirmPassword, setShowConfirmPassword] =
     useState<boolean>(false);

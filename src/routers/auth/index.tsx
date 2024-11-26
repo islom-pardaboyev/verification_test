@@ -9,6 +9,9 @@ function AuthRoutes() {
   const Login: LazyExoticComponent<any> = lazy(
     () => import("../../pages/auth/login/login")
   );
+  const ResetPassword: LazyExoticComponent<any> = lazy(
+    () => import("../../pages/auth/reset_password/resetPassword")
+  );
   const VerificationCode: LazyExoticComponent<any> = lazy(
     () => import("../../pages/auth/verification_code/verificationCode")
   );
@@ -17,15 +20,23 @@ function AuthRoutes() {
       path: "/",
       element: (
         <Suspense>
+          <Login />
+        </Suspense>
+      ),
+    },
+    {
+      path: "/register",
+      element: (
+        <Suspense>
           <Register />
         </Suspense>
       ),
     },
     {
-      path: "/login",
+      path: "/reset_password",
       element: (
         <Suspense>
-          <Login />
+          <ResetPassword />
         </Suspense>
       ),
     },

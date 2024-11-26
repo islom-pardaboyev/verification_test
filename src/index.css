@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    font-family: "Inter", sans-serif;
+}
+
+.swiper-pagination-bullet{
+    background: white !important;
+    transition:  width .3s ease-in-out;
+    border-radius: 2rem !important;
+}
+
+.swiper-pagination-bullet-active{
+    width: 1.5rem !important;
+    border-radius: 2rem !important;
+}
+
+.text-border{
+    -webkit-text-stroke: 1px #29282F;
+}
